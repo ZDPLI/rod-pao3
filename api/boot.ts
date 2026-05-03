@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === "production") {
       // Try to serve the file directly first
       const filePath = resolve(distPath, path === "/" ? "index.html" : path.slice(1));
       const file = await readFile(filePath);
-      const ext = path.split(".").pop() || "";
+      const ext = filePath.split(".").pop() || "";
       const mimeTypes: Record<string, string> = {
         js: "application/javascript",
         css: "text/css",

@@ -12,7 +12,7 @@ cd /mnt/agents/output/app
 git init
 git add .
 git commit -m "Ready for deployment"
-git remote add origin https://github.com/ВАШ_НИК/rod-pao.git
+git remote add origin https://github.com/ZDPLI/rod-pao3.git
 git push -u origin main
 ```
 
@@ -80,7 +80,7 @@ npx tsx db/seed.ts
 curl -fsSL https://get.docker.com | sh
 
 # 2. Клонировать репозиторий
-git clone https://github.com/ВАШ_НИК/rod-pao.git
+git clone https://github.com/ZDPLI/rod-pao3.git
 cd rod-pao
 
 # 3. Запустить

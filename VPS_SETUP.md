@@ -58,7 +58,7 @@ mkdir -p ~/rod-pao && cd ~/rod-pao
 
 **Вариант А — через Git:**
 ```bash
-git clone https://github.com/ВАШ_НИК/rod-pao.git .
+git clone https://github.com/ZDPLI/rod-pao3.git .
 ```
 
 **Вариант Б — через SCP (с вашего компьютера):**

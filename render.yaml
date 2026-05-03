@@ -5,7 +5,7 @@ services:
   - type: web
     name: rod-pao
     runtime: docker
-    repo: https://github.com/YOUR_USERNAME/rod-pao
+    repo: https://github.com/ZDPLI/rod-pao3
     branch: main
     dockerfilePath: ./Dockerfile
     dockerContext: .

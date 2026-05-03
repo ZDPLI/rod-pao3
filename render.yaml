@@ -1,0 +1,23 @@
+# Render.com Blueprint
+# Deploy with: Click "Blueprint" on Render dashboard and select this repo
+
+services:
+  - type: web
+    name: rod-pao
+    runtime: docker
+    repo: https://github.com/YOUR_USERNAME/rod-pao
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        value: ./data/rod.db
+    disk:
+      name: rod-data
+      mountPath: /app/data
+      sizeGB: 1
+    healthCheckPath: /api/health

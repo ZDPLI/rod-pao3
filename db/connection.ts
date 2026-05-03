@@ -1,0 +1,15 @@
+import { drizzle } from "drizzle-orm/better-sqlite3";
+// @ts-ignore better-sqlite3 has no type declarations
+import Database from "better-sqlite3";
+import * as schema from "./schema";
+
+const dbPath = process.env.DATABASE_URL || "./data/rod.db";
+
+const sqlite = new Database(dbPath);
+sqlite.pragma("journal_mode = WAL");
+
+export const db = drizzle(sqlite, { schema });
+
+export function getDb() {
+  return db;
+}
